@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>交通银行-贷款计算器</title>
+		<link rel="icon" type="image/jpg" href="img/icon.jpg">
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+	<div>
+		<a href="http://www.bankcomm.com/BankCommSite/default.shtml">
+			<img src="img/pic.jpg" style="width:250px;height:auto;margin:10px 20px;"></img>
+		</a>
+	</div>
+	<div style="width:800px;height:600;border:1px solid #eee;border-radius:4px;margin:0 auto;background-color:#eee;">
+		<div style="text-align:center;color:#2e6da4;font-weight:bold;">
+			<p style="font-size:28px;padding-top:30px;">贷款审核计算器</p>
+		</div>
+		<div class="bs-example bs-example-tabs" data-example-id="togglable-tabs" style="margin:30px;">
+	    <ul id="myTabs" class="nav nav-tabs" role="tablist">
+	       <li role="presentation" class="active myTabsLabel"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">个人贷款</a></li>
+	       <li role="presentation" class="myTabsLabel"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">多人组合贷款</a></li>
+	    </ul>
+	    <div id="myTabContent" class="tab-content">
+	        <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab" style="margin:30px;">
+	        	<div style="margin-bottom:30px;">
+	        		<label style="padding-bottom:10px;">还款人负债</label>
+	        		<span style="color:#d44950;">(若无负债额,数字填0)</span>
+	        		<label>：</label>
+	        		<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1">￥</span>
+						  <input id="one-fuzhai" type="text" class="form-control" placeholder="请输入还款人负债" aria-describedby="basic-addon1">
+					</div>
+	        	</div>
+	        	<div style="margin-bottom:30px;">
+	        		<label style="padding-bottom:10px;">还款人月收入:</label>
+	        		<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1">￥</span>
+						  <input id="one-shouru" type="text" class="form-control" placeholder="请输入还款人月收入" aria-describedby="basic-addon1">
+					</div>
+	        	</div>
+	        	<div style="margin-bottom:30px;">
+	        		<label style="padding-bottom:10px;">月还款额：</label>
+	        		<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1">￥</span>
+						  <input id="one-huankuan" type="text" class="form-control" placeholder="请输入月还款额" aria-describedby="basic-addon1">
+					</div>
+	        	</div>
+	        	<div>
+	        		<button style="width:100px; margin-left:575px;" type="button" class="btn btn-primary oneSubmit">
+					提交审核
+					</button>
+	        	</div>
+	        </div>
+			<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab" style="margin:30px;">
+				<div style="margin-bottom:30px;">
+	        		<label style="padding-bottom:10px;">还款人负债</label>
+	        		<span style="color:#d44950;">(若无负债额,数字填0)</span>
+	        		<label>：</label>
+	        		<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1">￥</span>
+						  <input id="two-fuzhai" type="text" class="form-control" placeholder="请输入还款人负债" aria-describedby="basic-addon1">
+					</div>
+	        	</div>
+	        	<div style="margin-bottom:30px;">
+	        		<label style="padding-bottom:10px;">还款人月收入:</label>
+	        		<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1">￥</span>
+						  <input id="two-shouru" type="text" class="form-control" placeholder="请输入还款人月收入" aria-describedby="basic-addon1">
+					</div>
+	        	</div>
+	        	<div style="margin-bottom:30px;">
+	        		<label style="padding-bottom:10px;">共同还款人负债</label>
+	        		<span style="color:#d44950;">(若无负债额,数字填0)</span>
+	        		<label>：</label>
+	        		<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1">￥</span>
+						  <input id="two-other-fuzhai" type="text" class="form-control" placeholder="请输入共同还款人负债" aria-describedby="basic-addon1">
+					</div>
+	        	</div>
+	        	<div style="margin-bottom:30px;">
+	        		<label style="padding-bottom:10px;">共同还款人月收入:</label>
+	        		<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1">￥</span>
+						  <input id="two-other-shouru" type="text" class="form-control" placeholder="请输入共同还款人月收入" aria-describedby="basic-addon1">
+					</div>
+	        	</div>
+	        	<div style="margin-bottom:30px;">
+	        		<label style="padding-bottom:10px;">月还款额：</label>
+	        		<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1">￥</span>
+						  <input id="two-huankuan"type="text" class="form-control" placeholder="请输入月还款额" aria-describedby="basic-addon1">
+					</div>
+	        	</div>
+	        	<div>
+	        		<button style="width:100px; margin-left:575px;" type="button" class="btn btn-primary twoSubmit">
+					提交审核
+					</button>
+	        	</div>
+      		</div>
+    	</div>
+    	<div class="alert alert-success alert-dismissible" role="alert" style="display:none;">
+		  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		  	<strong>恭喜!</strong>当前用户符合贷款条件.
+		</div>
+		<div class="alert alert-danger alert-dismissible" role="alert" style="display:none;">
+		  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		  	<strong>抱歉!</strong>当前用户不符合贷款条件.
+		</div>
+  	</div>
+	</div>
+
+	<!-- jQuery -->
+    <script src="jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    	<script src="index.js"></script>
+	</body>
+</html>
